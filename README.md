@@ -46,13 +46,33 @@ It’s part of a larger *Smart Mirror AI* concept combining health insights, out
 
 ## 🧠 Skills Demonstrated
 
-- **Edge AI Deployment** – Integrated HailoRT SDK and optimized inference pipeline for Hailo-8L.  
-- **Embedded Systems** – Built complete offline solution on Raspberry Pi 5 + external accelerator.  
-- **GUI Development** – Real-time Tkinter app with OpenCV feed and overlay drawing.  
-- **Computer Vision** – Skin-region segmentation and condition classification on live video.  
-- **System Design** – Modular config architecture and clean launch workflow.  
-- **Hardware-Software Integration** – Camera I/O, multi-threading, and dual HEF runtime.
-- **C/C++ Integration** - Utilizes HailoRT C-based SDK for low-level hardware inference acceleration via Python bindings.
+- **Edge AI Deployment & Optimization** – Integrated and stabilized the Hailo-8L accelerator on Raspberry Pi 5, resolving runtime, firmware, and driver conflicts to achieve real-time inference performance.  
+- **Linux & Kernel-Level Debugging** – Diagnosed low-level buffer, PCIe, and DMA configuration errors using `dmesg`, `lsmod`, and `journalctl`; tuned system parameters for stable device communication.  
+- **Embedded Systems Engineering** – Built a fully offline, on-device AI pipeline with synchronized camera input, multi-threaded processing, and low-latency output.  
+- **Dependency & Environment Management** – Fixed multiple Python venv and package version mismatches (3.11 vs 3.12, HailoRT 4.22.0) to ensure consistent runtime compatibility on ARM64.  
+- **Computer Vision & Model Deployment** – Implemented live skin-condition detection and optimized HEF model mappings through iterative calibration and quantization fixes.  
+- **GUI & Real-Time Visualization** – Developed a responsive Tkinter + OpenCV interface with dynamic overlays, thread-safe rendering, and performance monitoring.  
+- **Hardware-Software Integration** – Managed camera I/O, Hailo inference, and GUI threads concurrently; resolved synchronization and buffer overflow issues between hardware and software layers.  
+- **C/C++ & Python Interfacing** – Utilized HailoRT’s C-based SDK via Python bindings for low-level hardware acceleration and memory-aware inference control.  
+- **System Design & Reliability** – Structured modular configuration, reproducible startup scripts, and diagnostic logging for maintainable, scalable deployment.  
+- **Problem-Solving & Engineering Resilience** – Overcame dozens of complex setup and runtime errors—from kernel misconfigurations to overlay crashes—through systematic debugging, research, and iterative testing.
+
+---
+
+## ⚡ Challenges Overcome
+
+Developing the Smart Mirror AI Dermatologist required deep debugging across every layer of the stack.  
+I independently resolved more than 40 integration and runtime issues, including:
+
+- Kernel driver conflicts between the Raspberry Pi 5 and the Hailo-8L M.2 accelerator.  
+- Buffer and DMA allocation errors causing inference crashes during live camera capture.  
+- Python 3.11 vs 3.12 and HailoRT 4.22.0 version mismatches that broke the runtime environment.  
+- HEF mapping and quantization errors that prevented the model from loading correctly.  
+- Thread synchronization bugs between the capture, inference, and overlay loops that caused GUI freezes.  
+- Camera I/O detection failures, voltage mismatches, and device-tree overlay misconfigurations.  
+
+Through structured log analysis (`dmesg`, `journalctl`, `hailortcli`, custom debug prints) and iterative testing, I restored stability, improved throughput to 15 FPS, and created a fully reproducible on-device AI system.  
+These challenges strengthened my skills in **embedded systems troubleshooting, Linux kernel configuration, dependency management, and performance tuning**—demonstrating end-to-end ownership from hardware bring-up to final deployment.
 
 ---
 
