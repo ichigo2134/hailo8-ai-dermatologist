@@ -1,0 +1,16 @@
+venv/
+__pycache__/
+*.bak*
+*.backup*
+*.log
+*.tgz
+*.txt
+*.jsonl
+*.mp4
+*.jpg
+*.png
+tests/
+datasets/
+runtime/
+recordings/
+derm_full_*/

@@ -1,0 +1,12 @@
+dermatology:
+  backends:
+    hailo:
+      enabled: true
+      priority: 1
+      model_path: models/skin_lesion_classifier.hef
+      input_format: NHWC_UINT8         # matches your HEF: NHWC + UINT8
+      nms: by_class                    # HEF output: HAILO_NMS_BY_CLASS
+      labels_path: datasets/dermatology/metadata.json
+    cpu_fallback:
+      enabled: true
+      priority: 99

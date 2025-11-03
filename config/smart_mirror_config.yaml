@@ -1,0 +1,125 @@
+# Smart Mirror Backend Configuration
+# Complete configuration template for production deployment
+
+camera:
+  device: "/dev/video0"
+  resolution: [640, 480]
+  fps: 15
+  auto_exposure: true
+  brightness: 50
+  contrast: 50
+  saturation: 50
+  buffer_size: 4
+  timeout: 10  # seconds
+
+face_recognition:
+  backend_priority: ["hailo", "cpu"]
+  detection_model: "hog"  # or "cnn"
+  tolerance: 0.6
+  max_faces_per_frame: 5
+  processing_threads: 2
+  confidence_threshold: 0.8
+  face_encoding_model: "small"  # small, large
+  jitters: 1
+  upsampling: 1
+
+hailo:
+  device_path: "/dev/hailo0"
+  model_path: "./hailo/models/face_detection.hef"
+  inference_timeout: 1000
+  batch_size: 1
+  enable_profiling: false
+  memory_pool_size: 64  # MB
+  max_concurrent_inferences: 4
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+  cors_origins: ["http://localhost:3000", "http://localhost:8080"]
+  cors_methods: ["GET", "POST", "DELETE", "OPTIONS"]
+  cors_headers: ["Content-Type", "Authorization"]
+  rate_limit: "100/hour"
+  max_content_length: 16  # MB
+  request_timeout: 30  # seconds
+  enable_swagger: true
+
+websocket:
+  port: 5001
+  max_connections: 10
+  heartbeat_interval: 30  # seconds
+  message_queue_size: 100
+  compression: true
+  ping_interval: 20
+  ping_timeout: 10
+
+database:
+  path: "./database/faces.db"
+  backup_interval: 24  # hours
+  max_backups: 7
+  connection_timeout: 30
+  journal_mode: "WAL"
+  foreign_keys: true
+  vacuum_interval: 168  # hours (weekly)
+  encryption: false  # Set to true for production
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "./logs/smart_mirror.log"
+  max_size: "10MB"
+  backup_count: 5
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  console_output: true
+  json_format: false
+  log_requests: true
+
+performance:
+  target_fps: 10
+  memory_limit_mb: 512
+  cpu_limit_percent: 80
+  max_processing_time: 0.1  # seconds per frame
+  enable_gpu_monitoring: true
+  profile_memory: false
+  gc_threshold: 700  # number of allocations
+
+security:
+  enable_auth: false  # Set to true for production
+  jwt_secret: "your-secret-key-here"  # Change for production
+  jwt_expiry: 3600  # seconds
+  max_login_attempts: 5
+  lockout_duration: 300  # seconds
+  enable_https: false
+  ssl_cert_path: ""
+  ssl_key_path: ""
+
+monitoring:
+  enable_metrics: true
+  metrics_port: 9090
+  health_check_interval: 60  # seconds
+  alert_thresholds:
+    cpu_percent: 85
+    memory_percent: 85
+    disk_percent: 90
+    error_rate: 0.05  # 5%
+  enable_prometheus: false
+  statsd_host: "localhost"
+  statsd_port: 8125
+
+features:
+  enable_face_tracking: true
+  enable_emotion_detection: false
+  enable_age_estimation: false
+  enable_gender_detection: false
+  enable_mask_detection: false
+  save_unknown_faces: true
+  auto_learn_faces: false
+  face_clustering: false
+
+development:
+  debug_mode: false
+  hot_reload: false
+  test_mode: false
+  mock_camera: false
+  mock_hailo: false
+  enable_profiling: false
+  debug_images_path: "./debug_images"
+  save_debug_frames: false

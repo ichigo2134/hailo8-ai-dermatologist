@@ -1,0 +1,6 @@
+device_index: 0          # /dev/video0 (change if needed)
+width: 640
+height: 480
+target_fps: 12           # stream FPS cap
+score_thresh: 0.30
+draw_labels: true
